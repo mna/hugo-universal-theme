@@ -10,11 +10,15 @@
                 <div class="item">
                     <div class="row">
                         <div class="col-sm-5 right">
-                            <h1>{{ .title }}</h1>
+                            <a href={{ .link }}>
+                              <h1>{{ .title }}</h1>
+                            </a>
                             {{ .description | safeHTML }}
                         </div>
                         <div class="col-sm-7">
-                            <img class="img-responsive" src="{{ .image }}" alt="">
+                            <a href={{ .link }}>
+                              <img class="img-responsive" src="{{ .image }}" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
