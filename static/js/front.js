@@ -9,7 +9,6 @@ $(function () {
   menuSliding()
   productDetailSizes()
   utils()
-  animations()
   counters()
 })
 
@@ -93,36 +92,6 @@ function menuSliding () {
     } else {
       $(this).find('.dropdown-menu').first().stop(true, true).hide()
     }
-  })
-}
-
-/* animations */
-function animations () {
-  var delayTime = 0
-  $('[data-animate]').css({opacity: '0'})
-  $('[data-animate]').waypoint(function () {
-    delayTime += 150
-    $(this).delay(delayTime).queue(function (next) {
-      $(this).toggleClass('animated')
-      $(this).toggleClass($(this).data('animate'))
-      delayTime = 0
-      next()
-      // $(this).removeClass('animated')
-      // $(this).toggleClass($(this).data('animate'))
-    })
-  }, {
-    offset: '90%',
-    triggerOnce: true
-  })
-
-  $('[data-animate-hover]').hover(function () {
-    $(this).css({opacity: 1})
-    $(this).addClass('animated')
-    $(this).removeClass($(this).data('animate'))
-    $(this).addClass($(this).data('animate-hover'))
-  }, function () {
-    $(this).removeClass('animated')
-    $(this).removeClass($(this).data('animate-hover'))
   })
 }
 
