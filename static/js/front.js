@@ -9,7 +9,6 @@ $(function () {
   menuSliding()
   productDetailSizes()
   utils()
-  counters()
 })
 
 /* slider homepage */
@@ -113,14 +112,6 @@ function animationsSlider () {
 
       console.log($(this).data('animate-always'))
     })
-  })
-}
-
-/* counters */
-function counters () {
-  $('.counter').counterUp({
-    delay: 10,
-    time: 1000
   })
 }
 
